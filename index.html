@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Gym - UNC Levels</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('images/unc-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            text-shadow: 2px 2px 5px black;
+        }
+        #checkButton {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            background-color: #4B9CD3; /* UNC Blue */
+            color: white;
+            cursor: pointer;
+        }
+        #checkButton:hover { background-color: #357ABD; }
+        .level-container { margin-top: 50px; display: none; }
+        .level {
+            margin: 20px auto;
+            max-width: 400px;
+            border: 3px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .level img { width: 100%; border-radius: 10px; }
+        .level h2 { margin: 10px 0 0 0; }
+        .level p { margin: 5px 0 10px 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Diamond Gym - UNC Levels</h1>
+    <button id="checkButton">CHECK UNC'S LEVELS</button>
+
+    <div class="level-container" id="levelsContainer">
+        <div class="level">
+            <img src="images/unc-cool.jpg" alt="UNC Cool">
+            <h2>COOL</h2>
+            <p>20% Danger</p>
+        </div>
+        <div class="level">
+            <img src="images/unc-mad.jpg" alt="UNC Mad">
+            <h2>MAD</h2>
+            <p>50% Danger</p>
+        </div>
+        <div class="level">
+            <img src="images/unc-insane.jpg" alt="UNC Insane">
+            <h2>INSANE</h2>
+            <p>110% Danger</p>
+        </div>
+    </div>
+
+    <script>
+        const button = document.getElementById('checkButton');
+        const levelsContainer = document.getElementById('levelsContainer');
+        button.addEventListener('click', () => {
+            levelsContainer.style.display = 'block';
+            levelsContainer.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
